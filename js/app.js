@@ -39,7 +39,6 @@ function createDeck(){
     });
 
     deck.addEventListener('click', clickHappened);
-    startTimer();
 }
 
 createDeck();
@@ -81,6 +80,11 @@ function clickHappened(e){
                 cardsDontMatch();
             }
         }
+    }
+
+// start timer on first valid click
+    if (counter === 1) {
+        startTimer();
     }
 }
 
@@ -159,7 +163,7 @@ function incrementCounter(){
         } else if (counter === 33) {
             stars[1].style.display = 'none';
             starRating--;
-        } 
+        }
     }
 
     updateStars();
@@ -197,7 +201,6 @@ function resetGame() {
 function replayGame(){
     resetStats();
     toggleModal();
-    startTimer();
 }
 
 // Function to reset game stats
