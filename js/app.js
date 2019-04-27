@@ -159,10 +159,7 @@ function incrementCounter(){
         } else if (counter === 33) {
             stars[1].style.display = 'none';
             starRating--;
-        } else if (counter === 49) {
-            stars[2].style.display = 'none';
-            starRating--;
-        }
+        } 
     }
 
     updateStars();
